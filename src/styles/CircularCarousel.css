@@ -1,0 +1,210 @@
+/* ==========================================================================
+   CIRCULAR CAROUSEL - REACT BITS SPECIFICATION & ENHANCEMENT
+   3D Cylindrical / Orbit Rotation with Physics, Drag & Intro Transitions
+   ========================================================================== */
+
+.circular-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+.circular-carousel-stage {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective-origin: 50% 50%;
+  cursor: grab;
+}
+
+.circular-carousel-stage:active {
+  cursor: grabbing;
+}
+
+.circular-carousel-track {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform 0.1s cubic-bezier(0.1, 0.9, 0.2, 1);
+  will-change: transform;
+}
+
+.circular-carousel-card {
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #151F30;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(124, 92, 252, 0.15);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+  backface-visibility: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.circular-carousel-card:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 212, 255, 0.35);
+}
+
+.circular-carousel-card.intro-rise {
+  animation: cardRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@keyframes cardRise {
+  0% {
+    opacity: 0;
+    transform: translateY(120px) scale(0.85);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.circular-carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0d1421;
+}
+
+.circular-carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  transition: transform 0.4s ease;
+}
+
+.circular-carousel-card:hover .circular-carousel-image {
+  transform: scale(1.05);
+}
+
+.circular-carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(8, 11, 18, 0.92) 0%, rgba(8, 11, 18, 0.3) 50%, rgba(8, 11, 18, 0.05) 100%);
+  pointer-events: none;
+}
+
+.circular-carousel-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(16, 23, 37, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  color: #00D4FF;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.circular-carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 0.9rem;
+  z-index: 2;
+  text-align: left;
+}
+
+.circular-carousel-caption h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #F5F7FA;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.circular-carousel-caption p {
+  font-size: 0.75rem;
+  color: #9CA9BA;
+  line-height: 1.25;
+}
+
+/* Controls bar */
+.circular-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  z-index: 5;
+}
+
+.carousel-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(21, 31, 48, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #F5F7FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn:hover {
+  background: #7C5CFC;
+  border-color: #7C5CFC;
+  color: #FFFFFF;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(124, 92, 252, 0.4);
+}
+
+.carousel-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #9CA9BA;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  opacity: 0.85;
+}
+
+/* Ambient glow under the carousel */
+.carousel-glow-base {
+  position: absolute;
+  width: 65%;
+  height: 90px;
+  bottom: 60px;
+  background: radial-gradient(ellipse at center, rgba(124, 92, 252, 0.25) 0%, rgba(0, 212, 255, 0.12) 50%, transparent 80%);
+  filter: blur(28px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .circular-carousel-stage {
+    height: 410px;
+  }
+}
