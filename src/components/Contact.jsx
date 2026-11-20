@@ -195,7 +195,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Action Buttons: Email Me & Call Me */}
+              {/* Action Buttons: Email Me, LinkedIn Profile & Call Me */}
               <div className="direct-cta-buttons">
                 <a
                   href={`mailto:${contactEmail}`}
@@ -203,6 +203,17 @@ export default function Contact() {
                 >
                   <Mail size={18} />
                   <span>Email Me</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/personal-work-64440944b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-linkedin direct-btn"
+                  title="Connect on LinkedIn"
+                >
+                  <LinkedinIcon />
+                  <span>LinkedIn Profile</span>
                 </a>
 
                 <a
@@ -214,35 +225,39 @@ export default function Contact() {
                 </a>
               </div>
 
-              {/* Social Media Placeholders */}
+              {/* Social Media Links */}
               <div className="social-links-box">
-                <span className="social-heading">Social Profiles (Placeholders):</span>
+                <span className="social-heading">Social Profiles:</span>
                 <div className="social-icons">
                   <a
-                    href="#contact"
+                    href="https://github.com/baigmkhizer18-max"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="social-icon-btn"
-                    title="GitHub (Placeholder - to be updated)"
+                    title="GitHub Profile"
                   >
                     <GithubIcon />
                   </a>
                   <a
-                    href="#contact"
-                    className="social-icon-btn"
-                    title="LinkedIn (Placeholder - to be updated)"
+                    href="https://www.linkedin.com/in/personal-work-64440944b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon-btn linkedin-icon"
+                    title="LinkedIn Profile"
                   >
                     <LinkedinIcon />
                   </a>
                   <a
                     href="#contact"
                     className="social-icon-btn"
-                    title="Twitter / X (Placeholder - to be updated)"
+                    title="Twitter / X (Placeholder)"
                   >
                     <TwitterIcon />
                   </a>
                   <a
                     href="#contact"
                     className="social-icon-btn"
-                    title="Instagram (Placeholder - to be updated)"
+                    title="Instagram (Placeholder)"
                   >
                     <InstagramIcon />
                   </a>
@@ -427,14 +442,15 @@ export default function Contact() {
         .panel-title, .form-title {
           font-size: 1.45rem;
           font-weight: 700;
-          color: var(--text-main);
+          color: #0F172A;
           margin-bottom: 0.5rem;
         }
 
         .panel-desc, .form-subtitle {
           font-size: 0.92rem;
           line-height: 1.6;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
           margin-bottom: 2rem;
         }
 
@@ -476,7 +492,8 @@ export default function Contact() {
         .detail-label {
           font-family: var(--font-mono);
           font-size: 0.72rem;
-          color: var(--text-dim);
+          color: #475569;
+          font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.05em;
         }
@@ -484,12 +501,13 @@ export default function Contact() {
         .detail-value {
           font-size: 0.98rem;
           font-weight: 600;
-          color: var(--text-main);
+          color: #0F172A;
           word-break: break-all;
         }
 
         .detail-value.static {
-          color: var(--text-main);
+          color: #0F172A;
+          font-weight: 600;
         }
 
         .detail-value:not(.static):hover {
@@ -497,7 +515,7 @@ export default function Contact() {
         }
 
         .copy-mini-btn {
-          color: var(--text-muted);
+          color: #475569;
           padding: 6px;
           border-radius: 6px;
           background: rgba(15, 23, 42, 0.05);
@@ -511,9 +529,31 @@ export default function Contact() {
 
         .direct-cta-buttons {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.75rem;
           margin-bottom: 2rem;
+        }
+
+        .btn-linkedin {
+          background: #0A66C2;
+          color: #FFFFFF !important;
+          border: 1px solid #0A66C2;
+          font-weight: 600;
+          box-shadow: 0 4px 14px rgba(10, 102, 194, 0.3);
+        }
+
+        .btn-linkedin:hover {
+          background: #004182;
+          border-color: #004182;
+          color: #FFFFFF !important;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(10, 102, 194, 0.45);
+        }
+
+        @media (max-width: 680px) {
+          .direct-cta-buttons {
+            grid-template-columns: 1fr;
+          }
         }
 
         .direct-btn {
@@ -529,7 +569,8 @@ export default function Contact() {
           display: block;
           font-family: var(--font-mono);
           font-size: 0.76rem;
-          color: var(--text-dim);
+          color: #334155;
+          font-weight: 600;
           margin-bottom: 0.75rem;
         }
 
@@ -544,7 +585,7 @@ export default function Contact() {
           border-radius: 10px;
           background: rgba(15, 23, 42, 0.04);
           border: 1px solid rgba(15, 23, 42, 0.08);
-          color: #475569;
+          color: #1E293B;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -552,11 +593,18 @@ export default function Contact() {
         }
 
         .social-icon-btn:hover {
-          background: #7C5CFC;
-          border-color: #7C5CFC;
+          background: var(--accent-primary);
+          border-color: var(--accent-primary);
           color: #FFFFFF;
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(124, 92, 252, 0.3);
+          box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .social-icon-btn.linkedin-icon:hover {
+          background: #0A66C2;
+          border-color: #0A66C2;
+          color: #FFFFFF;
+          box-shadow: 0 4px 12px rgba(10, 102, 194, 0.35);
         }
 
         /* Form elements */
@@ -575,7 +623,7 @@ export default function Contact() {
         .form-label {
           font-size: 0.88rem;
           font-weight: 600;
-          color: var(--text-main);
+          color: #0F172A;
         }
 
         .req {
@@ -584,14 +632,20 @@ export default function Contact() {
 
         .form-input, .form-textarea {
           background: rgba(255, 255, 255, 0.95);
-          border: 1px solid rgba(15, 23, 42, 0.15);
+          border: 1px solid rgba(15, 23, 42, 0.2);
           border-radius: var(--radius-md);
           padding: 0.75rem 1rem;
-          color: var(--text-main);
+          color: #0F172A;
+          font-weight: 500;
           font-size: 0.95rem;
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
           outline: none;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+
+        .form-input::placeholder, .form-textarea::placeholder {
+          color: #64748B;
+          opacity: 1;
         }
 
         .form-input:focus, .form-textarea:focus {

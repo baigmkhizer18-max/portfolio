@@ -254,14 +254,14 @@ export default function Skills() {
           font-family: var(--font-heading);
           font-size: 0.88rem;
           font-weight: 600;
-          color: #475569;
+          color: #1E293B;
           padding: 0.6rem 1.25rem;
           border-radius: var(--radius-full);
           transition: all 0.2s ease;
         }
 
         .skill-tab-btn:hover {
-          color: #0F172A;
+          color: #000000;
         }
 
         .skill-tab-btn.active {
@@ -325,25 +325,26 @@ export default function Skills() {
         .skill-category-pill {
           font-family: var(--font-mono);
           font-size: 0.7rem;
-          color: #475569;
+          color: #1E293B;
           background: rgba(15, 23, 42, 0.04);
           padding: 0.25rem 0.65rem;
           border-radius: var(--radius-full);
-          border: 1px solid rgba(15, 23, 42, 0.08);
-          font-weight: 500;
+          border: 1px solid rgba(15, 23, 42, 0.1);
+          font-weight: 600;
         }
 
         .skill-name {
           font-size: 1.15rem;
           font-weight: 700;
-          color: var(--text-main);
+          color: #0F172A;
           margin-bottom: 0.45rem;
         }
 
         .skill-desc {
           font-size: 0.88rem;
           line-height: 1.55;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
           margin-bottom: 1.25rem;
         }
 

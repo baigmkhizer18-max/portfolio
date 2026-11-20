@@ -158,17 +158,17 @@ export default function Education() {
           font-family: var(--font-mono);
           font-size: 0.75rem;
           font-weight: 600;
-          color: #475569;
+          color: #1E293B;
           background: rgba(15, 23, 42, 0.04);
           padding: 0.35rem 0.85rem;
           border-radius: var(--radius-full);
-          border: 1px solid rgba(15, 23, 42, 0.08);
+          border: 1px solid rgba(15, 23, 42, 0.1);
         }
 
         .edu-institution {
           font-size: 1.45rem;
           font-weight: 700;
-          color: var(--text-main);
+          color: #0F172A;
           margin-bottom: 0.35rem;
         }
 
@@ -196,9 +196,9 @@ export default function Education() {
           padding: 0.35rem 0.75rem;
           border-radius: var(--radius-sm);
           background: rgba(15, 23, 42, 0.04);
-          border: 1px solid rgba(15, 23, 42, 0.08);
-          color: #475569;
-          font-weight: 500;
+          border: 1px solid rgba(15, 23, 42, 0.1);
+          color: #1E293B;
+          font-weight: 600;
         }
 
         .grade-pill {
@@ -218,7 +218,8 @@ export default function Education() {
         .edu-description {
           font-size: 0.95rem;
           line-height: 1.65;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
           margin-bottom: 1.5rem;
         }
 

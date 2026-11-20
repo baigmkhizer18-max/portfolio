@@ -1,6 +1,14 @@
 import React from 'react';
 import { ArrowUp, Code2, Heart, Sparkles, MapPin, Mail } from 'lucide-react';
 
+const LinkedinIcon = ({ size = 15, color = '#0A66C2' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
@@ -51,6 +59,12 @@ export default function Footer() {
             <p className="footer-contact-item">
               <Mail size={15} color="#00D4FF" />
               <a href="mailto:baigmkhizer18@gmail.com">baigmkhizer18@gmail.com</a>
+            </p>
+            <p className="footer-contact-item">
+              <LinkedinIcon size={15} color="#0A66C2" />
+              <a href="https://www.linkedin.com/in/personal-work-64440944b/" target="_blank" rel="noopener noreferrer">
+                LinkedIn Profile
+              </a>
             </p>
             <p className="footer-contact-item">
               <MapPin size={15} color="#10B981" />
@@ -141,7 +155,8 @@ export default function Footer() {
         .footer-about-text {
           font-size: 0.9rem;
           line-height: 1.65;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
           max-width: 420px;
         }
 

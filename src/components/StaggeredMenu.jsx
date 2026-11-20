@@ -51,7 +51,7 @@ export const StaggeredMenu = ({
   ],
   socialItems = [
     { label: 'GitHub', link: 'https://github.com/baigmkhizer18-max' },
-    { label: 'LinkedIn', link: 'https://linkedin.com' },
+    { label: 'LinkedIn', link: 'https://www.linkedin.com/in/personal-work-64440944b/' },
     { label: 'Twitter', link: 'https://twitter.com' }
   ],
   displaySocials = true,

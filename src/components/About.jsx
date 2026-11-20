@@ -136,8 +136,9 @@ export default function About() {
         .story-paragraph {
           font-size: 1.05rem;
           line-height: 1.75;
-          color: var(--text-main);
+          color: #1E293B;
           margin-bottom: 1.25rem;
+          font-weight: 500;
         }
 
         .story-paragraph strong {
@@ -164,13 +165,14 @@ export default function About() {
           font-size: 0.72rem;
           text-transform: uppercase;
           letter-spacing: 0.06em;
-          color: var(--text-dim);
+          color: #64748B;
+          font-weight: 600;
         }
 
         .fact-value {
           font-size: 0.95rem;
-          font-weight: 600;
-          color: var(--text-main);
+          font-weight: 700;
+          color: #0F172A;
         }
 
         .about-pillars {
@@ -206,14 +208,15 @@ export default function About() {
         .pillar-title {
           font-size: 1.1rem;
           font-weight: 700;
-          color: var(--text-main);
+          color: #0F172A;
           margin-bottom: 0.35rem;
         }
 
         .pillar-desc {
           font-size: 0.88rem;
           line-height: 1.55;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
         }
 
         @media (max-width: 900px) {

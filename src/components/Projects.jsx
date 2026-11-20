@@ -152,14 +152,16 @@ export default function Projects() {
 
         .banner-text-col h4 {
           font-size: 1.15rem;
-          color: var(--text-main);
+          color: #0F172A;
+          font-weight: 700;
           margin-bottom: 0.3rem;
         }
 
         .banner-text-col p {
           font-size: 0.92rem;
           line-height: 1.6;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
         }
 
         .projects-grid {
@@ -283,19 +285,21 @@ export default function Projects() {
         .project-title {
           font-size: 1.25rem;
           font-weight: 700;
-          color: var(--text-main);
+          color: #0F172A;
         }
 
         .slot-number-pill {
           font-family: var(--font-mono);
           font-size: 0.78rem;
-          color: var(--text-dim);
+          color: #1E293B;
+          font-weight: 600;
         }
 
         .project-desc {
           font-size: 0.88rem;
           line-height: 1.6;
-          color: var(--text-muted);
+          color: #334155;
+          font-weight: 450;
           margin-bottom: 1.25rem;
         }
 
@@ -312,9 +316,9 @@ export default function Projects() {
           padding: 0.25rem 0.6rem;
           border-radius: 6px;
           background: rgba(15, 23, 42, 0.04);
-          color: #475569;
-          border: 1px solid rgba(15, 23, 42, 0.08);
-          font-weight: 500;
+          color: #1E293B;
+          border: 1px solid rgba(15, 23, 42, 0.1);
+          font-weight: 600;
         }
 
         .project-card-footer {
