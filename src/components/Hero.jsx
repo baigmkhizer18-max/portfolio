@@ -467,7 +467,7 @@ export default function Hero({ currentTheme = 'gothic' }) {
           max-width: 250px;
           height: auto;
           object-fit: contain;
-          filter: drop-shadow(0 6px 20px rgba(255, 190, 0, 0.3));
+          filter: drop-shadow(0 6px 20px rgba(255, 255, 255, 0.2));
           transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 

@@ -95,7 +95,8 @@ export default function App() {
             height: 84px;
             border-radius: 22px;
             background: #080B12;
-            border: 2px solid rgba(255, 190, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
             display: flex;
             align-items: center;
             justify-content: center;

@@ -165,8 +165,8 @@ export default function Navbar() {
 
         .nav-logo-circle-pill:hover {
           transform: scale(1.06);
-          border-color: rgba(255, 200, 0, 0.45);
-          box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 190, 0, 0.25);
+          border-color: rgba(255, 255, 255, 0.4);
+          box-shadow: 0 10px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.2);
         }
 
         .logo-circle-inner {

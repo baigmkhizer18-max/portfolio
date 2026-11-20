@@ -126,7 +126,7 @@ export default function Footer() {
           height: 44px;
           border-radius: 12px;
           background: #080B12;
-          border: 1px solid rgba(255, 190, 0, 0.35);
+          border: 1px solid rgba(255, 255, 255, 0.2);
           display: flex;
           align-items: center;
           justify-content: center;
